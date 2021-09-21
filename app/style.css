@@ -1,0 +1,229 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+header h1 {
+  font-size: 18px;
+  color: #293356;
+}
+
+header p {
+  font-size: 11px;
+  text-align: center;
+  color: #858fad;
+  padding: 10px;
+}
+
+.container {
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.pageview {
+  padding: 10px;
+  font-size: 12px;
+  color: #858fad;
+}
+
+.pricing-container {
+  padding: 10px;
+  font-size: 30px;
+  color: #293356;
+  font-weight: bold;
+}
+
+.per-month-or-year {
+  font-size: 12px;
+  color: #858fad;
+  padding: 10px;
+}
+
+.progress {
+  padding: 20px;
+}
+
+.progress-bar {
+  width: 200px;
+  padding: 5px;
+  position: relative;
+}
+
+.word-discount {
+  display: none;
+}
+
+/* removing the defult range slider*/
+.myrange {
+  width: 100%;
+  outline: none;
+  opacity: 0.7;
+  transition: 0.02s;
+  background-color: transparent;
+  -webkit-appearance: none;
+}
+
+.myrange::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+.myrange:focus {
+  outline: none;
+}
+
+.myrange::-ms-track {
+  width: 100%;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+.myrange::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background: #10d5c2;
+  background-image: url(../images/icon-slider.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  border: none;
+  margin-top: 10px;
+}
+
+.myrange::-moz-range-thumb {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background: #10d5c2;
+  background-image: url(../images/icon-slider.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  border: none;
+}
+
+.myrange::-ms-thumb {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background: #10d5c2;
+  background-image: url(../images/icon-slider.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  border: none;
+}
+
+.myrange::-webkit-slider-thumb:hover {
+  box-shadow: 0px 15px 20px #10d5c2;
+}
+
+.progress-change {
+  width: 50%;
+  height: 9px;
+  background: #10d5c2;
+  border-radius: 3px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  opacity: 0.7;
+  z-index: -1;
+}
+
+.monthly #text1,
+#text2 {
+  font-size: 10px;
+  color: #858fad;
+  padding: 10px;
+}
+
+.monthly .discount {
+  color: #ff8c66;
+  padding: 10px;
+}
+
+.switcher {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 15px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 10px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 12px;
+  width: 12px;
+  left: 3px;
+  bottom: 2px;
+  border-radius: 50%;
+  background-color: white;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(13px);
+}
+
+.features {
+  padding: 30px;
+}
+.features ul {
+  list-style-image: url(../images/icon-check.svg);
+  text-align: center;
+}
+.features li {
+  font-size: 11px;
+  color: #858fad;
+  padding: 5px;
+}
+.features button {
+  padding: 10px 40px 10px;
+  font-size: 10px;
+  margin-top: 15px;
+  color: white;
+  background-color: #293356;
+  border: none;
+  border-radius: 25px;
+}/*# sourceMappingURL=style.css.map */

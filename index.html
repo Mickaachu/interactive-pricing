@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./app/style.css" />
+    <title>Frontend Mentor | Interactive pricing component</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Simple, traffic-based pricing</h1>
+        <p>
+          Sign-up for our 30 day trial. <br />
+          No credit card required.
+        </p>
+      </header>
+
+      <!--Start of pricing-->
+
+      <div class="container">
+        <div class="pageview"><span id="pageview">100K</span> pageviews</div>
+        <div class="pricing-container">
+          <span>$<span class="pricefix" id="pricefix">16</span>.00</span>
+          <span id="per-month-or-year" class="per-month-or-year"> /month</span>
+        </div>
+      </div>
+
+      <!--Progress bar-->
+      <div class="progress">
+        <div class="progress-bar">
+          <input
+            type="range"
+            min="1"
+            max="5"
+            step="1"
+            value="3"
+            class="myrange"
+            id="myrange"
+          />
+
+          <div class="progress-change" id="progressbar"></div>
+        </div>
+      </div>
+
+      <!--switch to yearly/monthly-->
+      <div class="switch">
+        <div class="monthly">
+          <span id="text1"">Monthly Billing</span>
+          <label class="switcher">
+            <input id="togglebutton" type="checkbox" />
+            <span class="slider"></span>
+          </label>
+          <span id="text2"">Yearly Billing</span>
+          <span class="discount">25%</span>
+          <span class="word-discount">discount</span>
+        </div>
+      </div>
+
+      <hr />
+
+      <!-- Features-->
+      <div class="features">
+        <ul>
+          <li>Unlimited websites</li>
+          <li>100% data ownership</li>
+          <li>Email reports</li>
+        </ul>
+        <button>Start my trial</button>
+      </div>
+    </div>
+
+    <!--Javascript start-->
+    <script src="./js.js"></script>    
+  </body>
+</html>

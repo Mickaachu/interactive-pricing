@@ -1,0 +1,241 @@
+$Soft-Cyan: hsl(174, 77%, 80%);
+$Strong-Cyan: hsl(174, 86%, 45%);
+$Light-Grayish-Red: hsl(14, 92%, 95%);
+$Light-Red: hsl(15, 100%, 70%);
+$Pale-Blue: hsl(226, 100%, 87%);
+$White: hsl(0, 0%, 100%);
+$Very-Pale-Blue: hsl(230, 100%, 99%);
+$Light-Grayish-Blue: hsl(224, 65%, 95%);
+$Light-Grayish-Blue: hsl(223, 50%, 87%);
+$Grayish-Blue: hsl(225, 20%, 60%);
+$Dark-Desaturated-Blue: hsl(227, 35%, 25%);
+
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: "Manrope", sans-serif;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+header h1 {
+  font-size: 18px;
+  color: $Dark-Desaturated-Blue;
+}
+header p {
+  font-size: 11px;
+  text-align: center;
+  color: $Grayish-Blue;
+  padding: 10px;
+}
+
+.container {
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.pageview {
+  padding: 10px;
+  font-size: 12px;
+  color: $Grayish-Blue;
+}
+.pricing-container {
+  padding: 10px;
+  font-size: 30px;
+  color: $Dark-Desaturated-Blue;
+  font-weight: bold;
+}
+
+.per-month-or-year {
+  font-size: 12px;
+  color: $Grayish-Blue;
+  padding: 10px;
+}
+
+.progress {
+  padding: 20px;
+}
+.progress-bar {
+  width: 200px;
+  padding: 5px;
+  position: relative;
+}
+.word-discount {
+  display: none;
+}
+/* removing the defult range slider*/
+.myrange {
+  width: 100%;
+  outline: none;
+  opacity: 0.7;
+  transition: 0.02s;
+  background-color: transparent;
+  -webkit-appearance: none;
+}
+
+.myrange::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+.myrange:focus {
+  outline: none;
+}
+
+.myrange::-ms-track {
+  width: 100%;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+//start of building custom slider
+.myrange::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background: $Strong-Cyan;
+  background-image: url(../images/icon-slider.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  border: none;
+  margin-top: 10px;
+}
+.myrange::-moz-range-thumb {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background: $Strong-Cyan;
+  background-image: url(../images/icon-slider.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  border: none;
+}
+.myrange::-ms-thumb {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background: $Strong-Cyan;
+  background-image: url(../images/icon-slider.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  border: none;
+}
+.myrange::-webkit-slider-thumb:hover {
+  box-shadow: 0px 15px 20px $Strong-Cyan;
+}
+
+.progress-change {
+  width: 50%;
+  height: 9px;
+  background: $Strong-Cyan;
+  border-radius: 3px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  opacity: 0.7;
+  z-index: -1;
+  //display: none;
+}
+
+.monthly #text1,
+#text2 {
+  font-size: 10px;
+  color: $Grayish-Blue;
+  padding: 10px;
+}
+.monthly .discount {
+  color: $Light-Red;
+  padding: 10px;
+}
+
+.switcher {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 15px;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 10px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 12px;
+  width: 12px;
+  left: 3px;
+  bottom: 2px;
+  border-radius: 50%;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(13px);
+  -ms-transform: translateX(13px);
+  transform: translateX(13px);
+}
+
+.features {
+  padding: 30px;
+
+  ul {
+    list-style-image: url(../images/icon-check.svg);
+    text-align: center;
+  }
+  li {
+    font-size: 11px;
+    color: $Grayish-Blue;
+    padding: 5px;
+  }
+  button {
+    padding: 10px 40px 10px;
+    font-size: 10px;
+    margin-top: 15px;
+    color: white;
+    background-color: $Dark-Desaturated-Blue;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.4s;
+  }
+  button:hover {
+    color: rgba(255, 255, 255, 0.781);
+    background-color: hsla(227, 35%, 27%, 0.719);
+  }
+}
